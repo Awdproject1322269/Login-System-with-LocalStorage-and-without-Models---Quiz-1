@@ -1,4 +1,5 @@
-🧑‍💻 Developer
+🤝 Development Team
+🧑‍💻 Developers
 
 Name: Farhan Butt, Abdullah Gujjar, Hassan Shah
 
@@ -6,95 +7,244 @@ GitHub: Awdproject1322269
 
 Email: awdproject123@gmail.com
 
-# 🎯 Quiz Quest-3
+# QuizQuest-3 🎯
 
-_Quiz Quest-3_ is a full-stack web application that allows users to play quizzes, track scores, and experience interactive question-based learning.  
-It includes a modern _React (Vite)_ frontend and a _Node.js + Express + MongoDB_ backend.
+A modern, role-based quiz application built with React.js and Node.js that allows teachers to create quizzes and students to attempt them with real-time performance tracking.
 
----
+## 🚀 Live Demo
 
-## 🚀 Features
+**Frontend:** http://localhost:5173  
+**Backend API:** http://localhost:5000
 
-✅ Interactive quiz system  
-✅ MongoDB database for storing questions & results  
-✅ RESTful API built with Express  
-✅ Modern and responsive UI  
-✅ Separate frontend & backend setup for clean architecture
+## ✨ Features
 
----
+### 👨‍🏫 Teacher Features
 
-## ⚙ Technologies Used
+- Create and manage quizzes
+- Track student progress and performance
+- Generate detailed reports
+- Class management system
+- Real-time analytics dashboard
 
-_Frontend:_
+### 👨‍🎓 Student Features
 
-- React (Vite)
-- Axios (for API calls)
-- React Router
-- TailwindCSS or CSS (based on your setup)
+- Attempt assigned quizzes
+- View performance history
+- Track learning progress
+- Interactive dashboard
+- Score analytics
 
-_Backend:_
+### 🔐 Security Features
 
-- Node.js
-- Express.js
-- MongoDB (with Mongoose)
-- dotenv (for environment variables)
-- CORS & body-parser middleware
+- Role-based authentication (Teacher/Student)
+- Auto logout after 30 minutes of inactivity
+- Password hashing with bcrypt
+- Protected routes
+- Session management
 
----
+## 🛠️ Tech Stack
 
-## 🧠 Prerequisites
+### Frontend
 
-Before running the project, make sure you have:
+- **React.js** - UI framework
+- **React Router DOM** - Navigation
+- **Tailwind CSS** - Styling
+- **Vite** - Build tool
+- **Axios** - HTTP client
 
-- [Node.js](https://nodejs.org/) (v16 or later)
-- [MongoDB](https://www.mongodb.com/) installed or an online MongoDB Compass connection
-- npm or yarn package manager
+### Backend
 
----
+- **Node.js** - Runtime environment
+- **Express.js** - Web framework
+- **MongoDB** - Database
+- **Mongoose** - ODM
+- **bcryptjs** - Password hashing
+- **CORS** - Cross-origin requests
 
-## 🛠 Installation & Setup
+## 🚀 Installation & Setup
 
-### Step 1: Clone the repository
+### Prerequisites
+
+- Node.js (v14 or higher)
+- MongoDB Compass (Local Installation)
+- npm or yarn
+
+### 1. Frontend Setup
 
 ```bash
-git clone https://github.com/your-username/quiz-quest-3.git
-cd quiz-quest-3
+# Navigate to frontend folder
+cd reactproject/quizproject
 
-Step 2: Setup Backend
-cd backend
+# Install dependencies (if not already installed)
 npm install
 
-Create a .env file inside backend/
+# Start development server
+npm run dev
+Frontend will run on: http://localhost:5173
+![Frontend browser view](./images/frontend.png)
+
+
+2. Backend Setup
+# Navigate to backend folder
+cd reactproject/backend
+
+# Install dependencies
+npm install express mongoose cors bcryptjs dotenv
+npm install -D nodemon
+
+# Start backend server
+npm run dev
+Backend will run on: http://localhost:5000
+
+3. Database Setup
+
+1.Open MongoDB Compass
+
+2.Connect to: mongodb://localhost:27017
+
+3.Database quizapp will be created automatically
+
+4.Collection users will be created automatically
+
+![MongoDB view](./images/backend.png)
+
+4. Environment Configuration
+Create backend/.env file:
 PORT=5000
-MONGO_URI=your_mongodb_connection_string
+MONGODB_URI=mongodb://localhost:27017/quizapp
 
-Start the backend server
+🔧 Running the Complete Application
+
+Terminal 1 - Backend
+cd reactproject/backend
 npm run dev
 
+Terminal 2 - Frontend
+cd reactproject/quizproject
+npm run dev
 
-By default it will run on:
-👉 http://localhost:5000
+Access Points:
+Application: http://localhost:5173
 
-Step 3: Setup Frontend
-cd ../frontend
+Backend API: http://localhost:5000
+
+MongoDB Compass: mongodb://localhost:27017
+
+![File Structure](./images/files.png)
+
+📊 API Endpoints
+Authentication
+POST /api/register - User registration
+
+POST /api/login - User login
+
+Test API
+GET /api - Check backend status
+
+🎨 UI/UX Features
+Responsive Design - Works on all devices
+
+Modern Glassmorphism UI - Beautiful gradients and blur effects
+
+Smooth Animations - Enhanced user experience
+
+Role-based Dashboards - Customized for teachers and students
+
+Auto Logout Timer - Security feature with countdown display
+
+🔒 Security Implementation
+Password hashing with bcryptjs
+
+CORS configuration for secure cross-origin requests
+
+Input validation on both client and server side
+
+Auto session timeout after 30 minutes
+
+Protected routes with authentication checks
+
+Local storage management for session persistence
+
+📈 Performance Features
+Loading States - Better user experience
+
+Error Handling - Comprehensive error management
+
+Form Validation - Client and server side validation
+
+Auto Scroll to Top - Better navigation experience
+
+Email Autocomplete - Browser suggestions for email fields
+
+👥 User Roles & Registration
+Teacher Registration
+Select "Teacher" role
+
+Provide email and password (min 6 characters)
+
+Access to quiz creation and student management
+
+Student Registration
+Select "Student" role
+
+Provide email and password (min 6 characters)
+
+Access to quiz attempts and performance tracking
+
+🎯 Quick Start Guide
+Start MongoDB Compass and connect to localhost
+
+Start Backend: cd reactproject/backend && npm run dev
+
+Start Frontend: cd reactproject/quizproject && npm run dev
+
+Open Browser: http://localhost:5173
+
+Register as Teacher or Student
+
+Explore Dashboard with role-specific features
+
+🐛 Troubleshooting
+Common Issues & Solutions
+
+1.Backend Connection Failed
+# Check if backend is running on port 5000
+curl http://localhost:5000/api
+
+2.MongoDB Connection Error
+
+Ensure MongoDB Compass is connected to localhost:27017
+
+Check if quizapp database exists
+
+3.Frontend Build Issues
+# Clear node_modules and reinstall
+rm -rf node_modules package-lock.json
 npm install
 
-Start the frontend (Vite)
-npm run dev
+4.Auto Logout Not Working
 
+Check browser console for errors
 
-By default it will run on:
-👉 http://localhost:5173
+Verify localStorage has loginTime item
 
-Step 4: Connect Frontend with Backend
+Development Tips
+Use Browser DevTools for debugging
 
-If the backend runs on a different port, make sure your frontend .env file (inside frontend/) contains:
+Check Network tab for API calls
 
-VITE_API_URL=http://localhost:5000
+Monitor Console for JavaScript errors
 
+Verify MongoDB collections in Compass
 
-Then, in your frontend code (for example using Axios):
+🙏 Acknowledgments
+React.js community for excellent documentation
 
-axios.get(${import.meta.env.VITE_API_URL}/api/quiz)
+Tailwind CSS for amazing utility-first CSS framework
 
+MongoDB for robust database solutions
+
+Vite team for fast build tools and development experience
+
+Express.js for simple and flexible backend framework
 ```
